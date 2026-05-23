@@ -1,2 +1,5 @@
-# website-tracking-pipeline
-Real-time data pipeline using Kafka, PostgreSQL, Python and Matplotlib
+# 🚀 Real-Time Website Tracking Pipeline
+
+A production-grade real-time data engineering pipeline built with Apache Kafka, Python, PostgreSQL, and Matplotlib.
+
+## 🏗️ Architecture
