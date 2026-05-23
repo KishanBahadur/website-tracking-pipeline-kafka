@@ -38,3 +38,36 @@ The Kafka Consumer automatically creates and populates the `website_events` tabl
 ├── consumer/consumer.py     # Reads Kafka events → saves to PostgreSQL
 ├── dashboard/dashboard.py   # Live auto-refreshing Matplotlib dashboard
 └── docker-compose.yml       # Spins up Kafka, Zookeeper, and PostgreSQL
+
+
+
+## ⚡ How to Run
+```bash
+# Start all containers (Kafka, Zookeeper, Postgres)
+docker-compose up -d
+
+# Terminal 1 - Start producer to generate live events
+python producer/producer.py
+
+# Terminal 2 - Start consumer to save events to Database
+python consumer/consumer.py
+
+# Terminal 3 - Start live dashboard
+python dashboard/dashboard.py
+
+```
+
+## 📊 Dashboard Features
+
+* **Events per page** (Bar chart)
+* **Action breakdown** (Pie chart)
+* **Top 10 active users** (Bar chart)
+* **Events over time** (Line chart)
+* **Auto-refreshes** every 3 seconds
+
+## 👤 Author
+
+**Kishan Bahadur** | Data Engineer | kishanbahadurshahi@gmail.com
+
+```
+
